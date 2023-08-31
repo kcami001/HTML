@@ -1,0 +1,26 @@
+body{
+    background-color: yellow;
+}
+header{
+    background-color: greenyellow !important;
+    border: 2px solid brown;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+header img{
+    padding: 25px;
+}
+nav{
+    background-color: blue !important;
+    border: 2px solid blueviolet !important;
+    border-radius: 22px;
+}
+nav p{
+    text-align: center;
+    color:aliceblue;
+    font-size: 40px;
+}
