@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0"
+    <link rel="stylesheet" href="">
+    <title>FORMULARIO</title>
+</head>
+<body>
+    <header>
+        <img src="" width="100px" height="100px" alt="">
+        <h1>FORMULARIO INCAP</h1>
+
+    </header>
+<nav>
+    <p>Este formulario es para registrar el ingreso de un estudiante a incap</p>
+</nav>
+<section>
+<!-- PHP: Method GEt pasa los datos por la uyl, atravez de parametros // Metod POST pasa los datos de forma interna -->
+<form action="">
+    <!-- Seccion marco del formulario -->
+    <fieldset>
+    <!-- Seccion de ingreso de nombre -->
+        <label>Nombre Completo</label>
+        <input type="text" name="nombre" placeholder="Ingrese nombre" autofocus required><br><br>
+        <!-- Seccion de ingreso de email -->
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Ingrese email" required><br><br>
+        <!-- Seccion de ingreso de contraseña-->
+        <label>contraseña:</label>
+        <input type="password" name="contraseña" placeholder="Ingrese contraseña" required><br><br>
+        <!-- Seccion de hobbies -->
+        <label>Selecciona tus hobbies</label>
+        <br>
+        <input type="checkbox" name="cine">Cine
+        <input type="checkbox" name="lectura">Lectura
+        <input type="checkbox" name="deporte">Deporte
+        <br><br>
+
+        <!-- Seccion estado civil -->
+        <label>Estado civil</label><br>
+        <input type="radio" name="estadocivil" value="casado">Casado(a)
+        <input type="radio" name="estadocivil" value="soltero">Soltero(a)
+        <input type="radio" name="estadocivil" value="viudo">Viudo(a)
+        <br><br>
+        <!-- Seccion opcion de lista -->
+    <label>PROGRAMAS TECNICOS INCAP</label>
+    <select name="select">
+    <option value="">Seleccione programa...</option><br>
+    <option value="sistemas">Programacion BBDD</option><br>
+    <option value="diseño">Diseño Grafico</option><br>
+    <option value="contabilidad">Contabilidad</option><br><br>
+    </select>
+    <br>
+    <label>Fecha de nacimiento:</label><br>
+    <input type="date" name="fechanac" title="Ingrese fecha de nacimiento "/><br>
+    <br>
+    <label>Coloque su edad</label><br>
+    <input type="number" min="1" max="120" title="Ingrese su edad" name="edad"/>
+    <br>
+    <br>
+    <label>Subir foto - archivo</label><br>
+    <input type="file" name="archivo" />
+    <br><br>
+    <!-- Seccion comentarios -->
+    <label>Comentario:</label>
+    <br>
+        <textarea name="Comentario" cols="40" rows="5"></textarea>
+    </fieldset>
+    <br><br>
+    <!-- Seccion de botones de enviar (submit) y cancelar (reset) -->
+    <button type="submit">Enviar</button>
+    <button type="reset">Cancelar</button>
+    <br><br>
+    </form>
+    </section>
+    <footer>
+    Derechos reservados &copy; 2023 @CamilaFarfan
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
