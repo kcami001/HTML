@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOLETIN NOTAS</title>
+    <!-- link de sitio Swetalert más elegantes --> 
+  <script src="https://unpkg.com/sweetalert@2.1.2/dist/sweetalert.min.js"></script>
+</head>
+<body>
+    <center>
+        <img src="./IMG/INCAPP.jpeg" alt="" width="150" height="150">
+        <h1>BOLETIN DE NOTAS</h1>
+        <h2>MATERIA PAE05 JAVASCRIPT</h2>
+        <h3>NOTAS [1= DESEMPEÑO, 2=TALLERES, 3= EXAMENES]</h3>
+        <br>
+        <script>
+            let nota_Std, suma, prom;
+            suma=0;
+            prom=0;
+            num=1;
+            nomb_Std=prompt("Ingrese nombre estudiante");
+            //CICLO WHILE INGRESO DE 3 NOTAS STD
+            while (num<=3){
+                nota_Std=parseFloat(prompt("Ingrese nota [1 a 5]"));
+                suma+=nota_Std; //Acumulador o sumador
+                num++;   // Contador de notas
+            }
+            //definitiva
+            prom=suma/(num-1);
+            //cualitativa
+            if (prom>=3){
+                swal("Apreciado estudiante","APROBASTE MATERIA JAVASCRIPT","success");
+            }else{
+                swal("Apreciado estudiante","REPROBASTE MATERIA JAVASCRIPT","error");
+            }
+            //SALIDA
+            document.write("***********************************************************");
+            document.write("br");
+            document.write("Estudiante!..."+nomb_Std+"<br>");
+            document.write("<font color='green' size=14>NOTA FINAL DE JAVASCRIPT!..."+prom.toFixed(2)+"</font>"+"<br>");
+            document.write("*************************************************************");
+        </script>
+    </center>
+</body>
+</html>

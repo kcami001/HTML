@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR PARES</title>
+<head>
+<body>
+    <center>
+        <img src="./IMG/INCAPP.jpeg" alt="" width="150" height="150">
+        <h1>GENERACION DE NUMEROS PARES</h1>
+        <h2>INGRESADO RANGO POR TECLADO</h2>
+        <br>
+        <script>
+            // VARIABLES DE ENTRADA
+            let inicio, final;
+            let num=0;
+            inicio=parseInt(prompt("Ingrese rango inicial"));
+            final=parseInt(prompt("Ingrese rango final"));
+            //PROCESO DE VALIDACION DE PASES 
+            for (f=inicio; f<=final;f++){
+                if (f%2==0){
+                    document.write("Número par..."+f+"<br>");
+                    num++; //contador pares
+                }
+            }
+            // SALIDA
+            document.write("*******************************************");
+            document.write("<br>");
+            document.write("Cantidad de numeros pares generados..."+num+"<br>");
+            document.write("*******************************************");
+            </script>
+    </center>
+</body>
+</head>
